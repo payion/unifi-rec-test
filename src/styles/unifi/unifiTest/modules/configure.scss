@@ -1,0 +1,192 @@
+.configure {
+  $color-grey: #9b9b9b;
+  $color-on: #5cb85c;
+  $color-off: #d9534f;
+
+  .configure__title {
+    font-size: 16px;
+    letter-spacing: .1em;
+    padding-bottom: 10px;
+    color: $color-grey;
+  }
+
+  .configure--row {
+    display: table-row;
+  }
+
+  .configure__form {
+    input[type="text"] {
+      height: 24px;
+    }
+
+    display: table;
+
+    .configure--row {
+      margin-top: 24px;
+    }
+
+    .configure--row:last-child {
+      margin-bottom: 24px;
+    }
+    
+    .configure--row>label {
+      font-weight: 600;
+    }
+
+    .button--right {
+      margin-right: 10px;
+    }
+
+    .configure__switch {
+      width: 60px;
+      height: 24px;
+      line-height: 24px;
+      display: flex;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .configure__switch--on {
+      border: $color-on 1px solid; 
+
+      &:hover {
+        div:first-child {
+          color: #449d44;
+        }
+
+        div:last-child {
+          background: #449d44;
+        }
+      }
+
+      div:first-child {
+        width: 50%;
+        color: $color-on;
+      }
+
+      div:first-child::before {
+        content: "on";
+      }
+
+      div:last-child {
+        width: 50%;
+        background: $color-on;
+      }
+    }
+
+    .configure__switch--off {
+      border: $color-off 1px solid; 
+      
+      &:hover {
+        div:first-child {
+          background: #c9302c;
+        }
+
+        div:last-child {
+          color: #c9302c;
+        }
+      }
+      div:first-child {
+        width: 50%;
+        background: $color-off;
+      }
+
+      div:last-child {
+        width: 50%;
+        color: $color-off;
+      }
+
+      div:last-child::before {
+        content: "off";
+      }
+    }
+
+    @media only screen and (min-width: 801px) {
+      .col--md--checkbox {
+        width: 14.28%;
+        padding: 0;
+      }
+    }
+  }
+
+  .configure__button {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  .configure__button--apply {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    margin-right: 10px;
+  }
+
+  .configure__button--apply:hover {
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+  }
+
+  .configure__button--cancel {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    float: right; 
+  }
+
+  .configure__button--cancel:hover {
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+  }
+
+  .configure--result {
+    .configure--row>label {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 0px;
+      color: $color-grey;
+      word-wrap: break-word;
+    }
+  }
+  
+  .borderBottom {
+    border-bottom: 1px solid $color-grey;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    & {
+      overflow-y: scroll;
+      height: 100%;
+    }
+
+    unifi-configure-form {
+      margin-bottom: 30px;
+    }
+
+    unifi-configure-result {
+      margin-bottom: 60px;
+    }
+  }
+}

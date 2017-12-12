@@ -1,0 +1,36 @@
+div.configure__title.uppercase.borderBottom configuration
+
+div.configure__form.borderBottom
+  form.appForm(novalidate, name="confiForm")
+    div.configure--row.col--md12.col--sm12.col--xs12
+      label.col--md3.col--sm12.col--xs12(for="firstName") First Name
+      div.col--md9.col--sm12.col--xs12
+        input(type="text", name="firstName", ng-model="firstName", required)
+    div.configure--row.col--md12.col--sm12.col--xs12
+      label.col--md3.col--sm12.col--xs12(for="lastName") Last Name
+      div.col--md9.col--sm12.col--xs12
+        input(type="text", name="lastName", ng-model="lastName", required)
+    div.configure--row.col--md12.col--sm12.col--xs12
+      label.col--md3.col--sm12.col--xs12 Favorite Colors
+      div.col--md9.col--sm12.col--xs12
+        div.col--md--checkbox.col--sm3.col--xs6(ng-repeat="(key, val) in favoriteColors")
+          input(type="checkbox", ng-model="favoriteColors[key]")
+          label.capitalize {{key}}
+    div.configure--row.col--md12.col--sm12.col--xs12
+      label.col--md3.col--sm12.col--xs12 Favorite City
+      div.col--md9.col--sm12.col--xs12
+        div.col--md12.col--sm12.col--xs12(ng-repeat="city in cities")
+          input(type="radio", value="{{city}}", ng-model="favoriteCity", ng-required="!favoriteCity", name="favoriteCity")
+          label {{city}}
+    div.configure--row.col--md12.col--sm12.col--xs12
+      label.col--md3.col--sm12.col--xs12 Verified
+      div.col--md9.col--sm12.col--xs12
+        div.configure__switch(ng-class="{'configure__switch--on': isVerified, 'configure__switch--off': !isVerified}", ng-click="toggleVerified()")
+          div.uppercase
+          div.uppercase
+
+div.configure--row.col--md12.col--sm12.col--xs12
+  input.uppercase(type="button", class="configure__button configure__button--apply button--right", value="apply changes", ng-click="submit()",
+    ng-disabled="confiForm.$invalid || !checkRequired()")
+  a.uppercase(ng-click="reset()") reset
+  input.uppercase(type="button", class="configure__button configure__button--cancel", value="cancel", ng-click="cancel()")

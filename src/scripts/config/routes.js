@@ -2,10 +2,8 @@
 
 angular.module('example').config([
   '$urlRouterProvider',
-  '$locationProvider',
   function (
-    $urlRouterProvider,
-    $locationProvider
+    $urlRouterProvider
   ) {
     $urlRouterProvider
       .otherwise('/');
