@@ -1,8 +1,6 @@
 'use strict';
 
 function ConfiFormController ($scope, $location) {
-  $scope.cities = ['Chicago', 'Seattle', 'Los Angeles'];
-
   var init = function() {
     $scope.firstName = '';
     $scope.lastName = '';
@@ -32,10 +30,17 @@ function ConfiFormController ($scope, $location) {
   };
 
   var formatRequest = function() {
+    var favoriteColors = [];
+    for(var color in $scope.favoriteColors) {
+      if($scope.favoriteColors[color]) {
+        favoriteColors.push(color);
+      }
+    }
+
     return {
       'firstName': $scope.firstName,
       'lastName': $scope.lastName,
-      'favoriteColors': $scope.favoriteColors,
+      'favoriteColors': favoriteColors,
       'favoriteCity': $scope.favoriteCity,
       'isVerified': $scope.isVerified
     };

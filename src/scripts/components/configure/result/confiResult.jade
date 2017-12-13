@@ -1,6 +1,6 @@
-div.configure__title.uppercase.borderBottom result
+div.configure__title.uppercase.borderBottom {{'CONFIGURE_RESPONSE' | translate}}
 
 div.configure--result
   div.configure--row.col--md12.col--sm12.col--xs12(ng-repeat="(key, val) in result")
-    label.alignRight.col--md6.col--sm6.col--xs6 {{key}}
+    label.alignRight.col--md6.col--sm6.col--xs6 {{key | translate}}
     p.alignLeft.col--md6.col--sm6.col--xs6(ng-bind = "result[key]")
