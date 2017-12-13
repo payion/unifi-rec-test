@@ -1,5 +1,21 @@
 {
   "EXAMPLE_HELLO_WORLD": "Hello world",
-  "EXAMPLE_CONFIGUE": "Just my test string",
-  "EXAMPLE_SITE_CONFIGURE": "Configure me!"
+  "EXAMPLE_SITE_CONFIGURE": "Configure me!",
+  "CONFIGURE_CONFIGURATION": "Configuration",
+  "CONFIGURE_RESPONSE": "Response",
+  "CONFIGURE_FIRST_NAME": "First Name",
+  "CONFIGURE_LAST_NAME": "last Name",
+  "CONFIGURE_FAVORITE_COLORS": "Favorite Colors",
+  "CONFIGURE_FAVORITE_CITY": "Favorite City",
+  "CONFIGURE_VERIFIED": "Verified",
+  "CONFIGURE_APPLY_BUTTON": "Apply Change",
+  "CONFIGURE_RESET_BUTTON": "Reset",
+  "CONFIGURE_CANCEL_BUTTON": "Cancel",
+  "red": "Red",
+  "orange": "Orange",
+  "yellow": "Yellow",
+  "green": "Green",
+  "blue": "Blue",
+  "purple": "Purple",
+  "black": "Black",
 }
