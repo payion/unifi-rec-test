@@ -1,7 +1,7 @@
 module.exports = {
   example: {
     options: {
-      hostname: '0.0.0.0',
+      hostname: 'localhost',
       port: 6060,
       keepalive: true,
       livereload: true,
