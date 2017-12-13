@@ -11,7 +11,7 @@ function ConfiResultController ($scope, $translate) {
     };
   };
 
-  $scope.$on('handleBroadcast', function(event, args) {
+  $scope.$on('handleEmit', function(event, args) {
     var favoriteColors = [];
 
     init();
